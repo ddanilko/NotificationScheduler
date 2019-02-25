@@ -41,6 +41,7 @@ pipeline {
       }
     }
     stage('Full Tests') {
+      when { branch 'master' }
       parallel {
         stage('Hardware A Tests') {
           steps {
