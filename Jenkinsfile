@@ -60,8 +60,9 @@ pipeline {
       }
     }
     stage('Should Release?') {
-      steps {
-        isUnix()
+      when { branch 'master' }
+	  steps {
+        echo 'Release'
       }
     }
   }
